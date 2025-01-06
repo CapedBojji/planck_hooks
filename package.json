@@ -1,7 +1,7 @@
 {
-  "name": "@rbxts/planck-flamecs-hooks",
-  "version": "0.0.6",
-  "description": "A @rbxts/planck plugin that provides support for @rbxts/flamecs hooks.",
+  "name": "@rbxts/planck--hooks",
+  "version": "0.0.1-rc.0",
+  "description": "A @rbxts/planck plugin that provides support for hooks.",
   "main": "out/init.lua",
   "scripts": {
     "build": "rbxtsc",
@@ -22,8 +22,7 @@
     "Roblox-TS",
     "roblox ts",
     "roblox-ts",
-    "@rbxts/planck",
-    "@rbxts/flamecs"
+    "@rbxts/planck"
   ],
   "author": "YetAnotherClown",
   "license": "MIT",
