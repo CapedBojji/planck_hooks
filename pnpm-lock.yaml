@@ -11,6 +11,9 @@ importers:
       '@flamework/core':
         specifier: ^1.2.3
         version: 1.2.3
+      '@rbxts/phantom':
+        specifier: ^0.7.0
+        version: 0.7.0
       '@rbxts/planck':
         specifier: ^0.1.2
         version: 0.1.2
@@ -135,6 +138,9 @@ packages:
 
   '@rbxts/object-utils@1.0.4':
     resolution: {integrity: sha512-dLLhf022ipV+9i910sOE7kl9losKHoon0WgeerHqVMQA5EYsLUsVT2AxhJuhk8MiDn5oJ2GiFofE/LadY9TpJQ==}
+
+  '@rbxts/phantom@0.7.0':
+    resolution: {integrity: sha512-Thk8p9cFrbxIaVEzT7yjUvIpha60HktMClmtrUBK8BnP3EF8WlYJcgJVljeNVhJCPZos/CBg6Zbjp+HVfPjIEg==}
 
   '@rbxts/planck@0.1.2':
     resolution: {integrity: sha512-b5nWhMlpPjdP/qxI70Zi9xd7WuhKvLLzjHWJC13/lBWeO08+yHSTsMdOdJ78djLyRPwDyWLmcyJmpJYDwqw1lQ==}
@@ -981,6 +987,8 @@ snapshots:
   '@rbxts/maid@1.1.0': {}
 
   '@rbxts/object-utils@1.0.4': {}
+
+  '@rbxts/phantom@0.7.0': {}
 
   '@rbxts/planck@0.1.2': {}
 
