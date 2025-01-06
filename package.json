@@ -1,6 +1,6 @@
 {
   "name": "@rbxts/planck-hooks",
-  "version": "0.0.1-rc.0",
+  "version": "0.0.1-rc.1",
   "description": "A @rbxts/planck plugin that provides support for hooks.",
   "main": "out/init.lua",
   "scripts": {
