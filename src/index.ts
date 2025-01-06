@@ -12,7 +12,7 @@ interface HookStorage<T> {
     cleanup?: Cleanup<T>;
     states: Map<string, T>;
 }
-export class PlanckFlamecsHooksPlugin implements Plugin {
+export class PlanckHooksPlugin implements Plugin {
 	private readonly systemData: Map<SystemFn<unknown[]>, {
 		system: SystemFn<unknown[]>;
 		deltaTime: number;
