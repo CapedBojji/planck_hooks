@@ -26,10 +26,8 @@ function cleanup(storage: ThrottleStorage): boolean {
 export function useThrottle(
 	seconds: number,
 	discriminator?: unknown,
-	key?: Modding.Caller<"uuid">,
 ): boolean {
-	assert(key);
-	const storage = useHookState<ThrottleStorage>(key, discriminator, cleanup);
+	const storage = useHookState<ThrottleStorage>(discriminator, cleanup);
 
 	const currentTime = os.clock();
 	if (storage.time === undefined || currentTime - storage.time >= seconds) {

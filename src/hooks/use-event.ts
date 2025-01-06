@@ -71,11 +71,9 @@ function cleanup<T extends Array<unknown>>(storage: EventStorage<T>): boolean {
 export function useEvent<T extends Array<unknown>>(
 	event: EventLike<T>,
 	discriminator?: unknown,
-	key?: Modding.Caller<"uuid">,
 ): IterableFunction<T> {
-	assert(key);
 
-	const storage = useHookState<EventStorage<T>>(key, discriminator, cleanup);
+	const storage = useHookState<EventStorage<T>>(discriminator, cleanup);
 
 	if (!storage.connection) {
 		storage.events = [];
