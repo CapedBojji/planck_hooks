@@ -71,7 +71,7 @@ export function useCurrentFrame(): FrameState {
  */
 export function useHookState<T>(discriminator: unknown, cleanup?: Cleanup<T>): T {
     const [file, line] = debug.info(3, "sl");
-    const fn = debug.info(2, "f");
+    const [fn] = debug.info(2, "f");
     const key = `${tostring(fn)}:${file}:${line}`;
 
 	discriminator ??= key;
