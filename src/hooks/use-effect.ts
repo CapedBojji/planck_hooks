@@ -16,7 +16,7 @@ export function useEffect(
         return value === undefined ? false : value;
     });
 
-    if (!dependencies || useChange([dependencies, discriminator], storage)) {
+    if (!dependencies || useChange(dependencies, storage)) {
         storage.dependencies = dependencies
         const cleanup = effect();
         if (cleanup) {

@@ -11,7 +11,7 @@ export function useMemo<T extends unknown>(
     discriminator?: unknown,
 ): T {
     const storage = useHookState<Storage<T>>(discriminator);
-    if (useChange([dependencies, discriminator], storage)) {
+    if (useChange(dependencies, storage)) {
         const newValues = callback();
         storage.oldValues = newValues;
         return newValues;

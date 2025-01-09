@@ -16,7 +16,7 @@ export function useAsync<T>(
         promise.cancel();
         return false;
     });
-    if (useChange([dependencies, discriminator], storage)) {
+    if (useChange(dependencies, storage)) {
         storage.promise.cancel();
         storage.promise = callback();
         storage.promise.andThen((value) => {
