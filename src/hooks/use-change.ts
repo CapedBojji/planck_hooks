@@ -1,4 +1,4 @@
-import { deepEquals } from "@rbxts/phantom/src/Array";
+import { equals } from "@rbxts/phantom/src/Array";
 import { useHookState } from "../topo";
 
 interface storage {
@@ -10,5 +10,5 @@ export function useChange(dependencies: readonly unknown[], discriminator?: unkn
     const storage = useHookState<storage>(discriminator); 
     const previous = storage.dependencies;
     storage.dependencies = dependencies;
-    return !deepEquals(previous, dependencies);
+    return !equals(previous, dependencies);
 }
