@@ -7,12 +7,14 @@ interface Storage {
 }
 
 export function useInstance<T extends Instance>(creator: () => T, discriminator?: unknown): T {
-    const storage = useHookState<Storage>(discriminator);
+    const storage = useHookState<Storage>(discriminator, (state) => {
+        if (state.instance) {
+            state.instance.Destroy();
+        }
+        return false;
+    });
     const instance = useMemo(creator, [], discriminator);
     if (useChange([instance], storage)) {
-        if (storage.instance) {
-            storage.instance.Destroy();
-        }
         storage.instance = instance;
     }
     return storage.instance as T;
