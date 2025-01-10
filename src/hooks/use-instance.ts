@@ -13,9 +13,8 @@ export function useInstance<T extends Instance>(creator: () => T, discriminator?
         }
         return false;
     });
-    const instance = useMemo(creator, [], discriminator);
-    if (useChange([instance], storage)) {
-        storage.instance = instance;
+    if (storage.instance === undefined) {
+        storage.instance = creator();
     }
     return storage.instance as T;
 }

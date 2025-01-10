@@ -1,11 +1,11 @@
 import { useHookState } from "../topo";
 
 
-interface Storage<T extends unknown[]> {
+interface Storage<T extends unknown> {
     value?: [T];
 }
 
-export function useState<T extends unknown[]>(value: T, discriminator?: unknown) {
+export function useState<T extends unknown>(value: T, discriminator?: unknown) {
     const storage = useHookState<Storage<T>>(discriminator);
 
     if (storage.value === undefined) {
