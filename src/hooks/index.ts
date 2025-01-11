@@ -8,3 +8,4 @@ export * from "./use-change";
 export * from "./use-async";
 export * from "./use-interval"
 export * from "./use-state"
+export * from "./use-destructor"
