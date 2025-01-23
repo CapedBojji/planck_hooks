@@ -11,7 +11,7 @@ export function useEffect(
     dependencies?: unknown[],
     discriminator?: unknown,
 ): void {
-    const storage = useHookState<Storage>(dependencies, (state) => {
+    const storage = useHookState<Storage>(discriminator, (state) => {
         const value = state.cleanup?.()
         return value === undefined ? false : value;
     });
